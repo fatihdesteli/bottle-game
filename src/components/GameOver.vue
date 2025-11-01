@@ -629,76 +629,76 @@ const stats = computed(() => [
 /* Responsive */
 @media (max-width: 480px) {
   .game-over-screen {
-    padding: 0.8rem 0.5rem;
+    padding: 0.5rem 0.3rem;
   }
 
   .game-over-container {
-    padding: 1rem;
-    border-radius: 18px;
+    padding: 0.8rem;
+    border-radius: 16px;
   }
 
   .game-over-title {
-    font-size: 1.6rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
   }
 
   .final-score {
-    margin: 0.8rem 0;
+    margin: 0.6rem 0;
   }
 
   .score-label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .score-value {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .tabs {
-    gap: 0.5rem;
-    margin: 0.8rem 0;
+    gap: 0.4rem;
+    margin: 0.6rem 0;
   }
 
   .tab-btn {
-    padding: 0.6rem 0.9rem;
-    font-size: 0.85rem;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.8rem;
   }
 
   .stats-grid {
     grid-template-columns: 1fr;
-    gap: 0.6rem;
+    gap: 0.5rem;
   }
 
   .stat-card {
-    padding: 0.8rem;
-  }
-
-  .stat-value {
-    font-size: 1.4rem;
-  }
-
-  .stat-label {
-    font-size: 0.75rem;
-  }
-
-  .leaderboard-item {
     padding: 0.7rem;
   }
 
+  .stat-value {
+    font-size: 1.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .leaderboard-item {
+    padding: 0.6rem;
+  }
+
   .new-achievements h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .action-buttons {
     flex-direction: column;
-    gap: 0.7rem;
-    margin-top: 1rem;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
   }
 
   .btn-primary,
   .btn-secondary {
-    padding: 0.85rem 1.1rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
   }
 }
 </style>

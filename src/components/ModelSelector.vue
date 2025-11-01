@@ -344,55 +344,55 @@ const goBack = () => {
 /* Responsive */
 @media (max-width: 480px) {
   .model-selector {
-    padding: 0.8rem 0.5rem;
+    padding: 0.5rem 0.3rem;
   }
 
   .selector-container {
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   .header h1 {
-    font-size: 1.4rem;
-    margin: 2.2rem 0 0.3rem 0;
+    font-size: 1.3rem;
+    margin: 2rem 0 0.2rem 0;
   }
 
   .subtitle {
-    font-size: 0.85rem;
-  }
-
-  .back-btn {
-    padding: 0.55rem 0.9rem;
     font-size: 0.8rem;
   }
 
+  .back-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
   .models-grid {
-    gap: 0.7rem;
+    gap: 0.6rem;
   }
 
   .model-card {
-    padding: 0.9rem;
+    padding: 0.8rem;
   }
 
   .avatar-placeholder {
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
   }
 
   .avatar-initial {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .model-info h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .model-info p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .btn-start {
-    padding: 1rem 1.8rem;
-    font-size: 1rem;
+    padding: 0.95rem 1.7rem;
+    font-size: 0.95rem;
   }
 }
 

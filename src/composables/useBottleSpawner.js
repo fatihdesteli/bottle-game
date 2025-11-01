@@ -56,8 +56,26 @@ export function useBottleSpawner() {
 
     const spawn = () => {
       if (gameStore.gameState === 'playing') {
-        const bottle = createBottle()
-        onSpawn(bottle)
+        // Level 4+ (index 3+): spawn 2 bottles at once
+        const shouldSpawnDouble = gameStore.currentLevel >= 3
+
+        if (shouldSpawnDouble) {
+          // Spawn first bottle
+          const bottle1 = createBottle()
+          onSpawn(bottle1)
+
+          // Spawn second bottle with slight delay to avoid exact overlap
+          setTimeout(() => {
+            if (gameStore.gameState === 'playing') {
+              const bottle2 = createBottle()
+              onSpawn(bottle2)
+            }
+          }, 100)
+        } else {
+          // Spawn single bottle for levels 1-3
+          const bottle = createBottle()
+          onSpawn(bottle)
+        }
       }
 
       // Schedule next spawn

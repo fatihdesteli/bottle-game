@@ -335,55 +335,55 @@ const progressPercentage = computed(() => {
 /* Responsive */
 @media (max-width: 480px) {
   .score-board {
-    padding: 0.4rem 0.5rem;
-    gap: 0.3rem;
+    padding: 0.3rem 0.4rem;
+    gap: 0.25rem;
   }
 
   .lives {
-    font-size: 1.2rem;
-    gap: 0.15rem;
+    font-size: 1.1rem;
+    gap: 0.1rem;
   }
 
   .score-label {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
   }
 
   .score-value {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .progress-bar {
-    height: 18px;
+    height: 16px;
   }
 
   .level-info {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .level-label {
-    padding: 0.2rem 0.6rem;
+    padding: 0.15rem 0.5rem;
   }
 
   .next-level-info,
   .max-level-info {
-    font-size: 0.7rem;
-  }
-
-  .combo-counter {
-    padding: 0.2rem 0.5rem;
-  }
-
-  .combo-icon {
-    font-size: 0.85rem;
-  }
-
-  .combo-text {
     font-size: 0.65rem;
   }
 
+  .combo-counter {
+    padding: 0.15rem 0.4rem;
+  }
+
+  .combo-icon {
+    font-size: 0.8rem;
+  }
+
+  .combo-text {
+    font-size: 0.6rem;
+  }
+
   .powerup-badge {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.65rem;
   }
 }
 </style>

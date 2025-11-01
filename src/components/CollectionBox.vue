@@ -308,13 +308,13 @@ onUnmounted(() => {
 /* Responsive */
 @media (max-width: 480px) {
   .collection-box {
-    bottom: 30px;
+    bottom: 10px;
     height: 80px;
   }
 
   .drag-hint {
-    font-size: 0.75rem;
-    bottom: -25px;
+    font-size: 0.7rem;
+    bottom: -20px;
   }
 
   .shield-effect {
