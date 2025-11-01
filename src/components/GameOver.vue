@@ -629,12 +629,15 @@ const stats = computed(() => [
 /* Responsive */
 @media (max-width: 480px) {
   .game-over-screen {
-    padding: 0.5rem 0.3rem;
+    padding: 0;
+    height: 100vh;
+    height: 100dvh;
   }
 
   .game-over-container {
     padding: 0.8rem;
     border-radius: 16px;
+    margin: 0.5rem 0.3rem;
   }
 
   .game-over-title {

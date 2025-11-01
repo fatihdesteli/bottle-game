@@ -344,11 +344,14 @@ const goBack = () => {
 /* Responsive */
 @media (max-width: 480px) {
   .model-selector {
-    padding: 0.5rem 0.3rem;
+    padding: 0;
+    height: 100vh;
+    height: 100dvh;
   }
 
   .selector-container {
     gap: 0.8rem;
+    padding: 0.5rem 0.3rem;
   }
 
   .header h1 {

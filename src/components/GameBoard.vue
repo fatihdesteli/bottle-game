@@ -390,6 +390,11 @@ onUnmounted(() => {
 }
 
 @media (max-width: 480px) {
+  .game-board {
+    height: 100vh;
+    height: 100dvh;
+  }
+
   .pause-btn {
     width: 36px;
     height: 36px;

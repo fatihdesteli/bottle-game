@@ -39,30 +39,49 @@ const currentComponent = computed(() => {
   box-sizing: border-box;
 }
 
-html, body {
+html {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: fixed;
 }
 
 body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background: linear-gradient(135deg, #00563B 0%, #1a7a58 50%, #2d8f6f 100%);
   color: #2C3E50;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 #app {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .app-container {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
   position: relative;
   overflow: hidden;
 }
@@ -100,6 +119,23 @@ button:active {
   button {
     padding: 0.8rem 1.6rem;
     font-size: 1rem;
+  }
+}
+
+/* Mobile - Full Screen No Gaps */
+@media (max-width: 480px) {
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    position: fixed;
+    overflow: hidden;
+  }
+
+  #app {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
   }
 }
 </style>

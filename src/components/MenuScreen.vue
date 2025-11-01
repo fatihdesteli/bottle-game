@@ -500,11 +500,14 @@ export default {
 /* Responsive */
 @media (max-width: 480px) {
   .menu-screen {
-    padding: 0.5rem 0.3rem;
+    padding: 0;
+    height: 100vh;
+    height: 100dvh;
   }
 
   .menu-container {
     gap: 0.8rem;
+    padding: 0.5rem 0.3rem;
   }
 
   .game-title {
