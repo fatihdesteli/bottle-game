@@ -22,7 +22,6 @@ export function useCollision() {
     // Get game area width from DOM
     const gameArea = document.querySelector('.game-canvas')
     if (!gameArea) {
-      console.warn('Game area not found!')
       return { hit: false, isPerfect: false }
     }
 
@@ -47,15 +46,6 @@ export function useCollision() {
     const bottleTop = bottle.y
     const bottleBottom = bottle.y + bottleHeightPx
 
-    // Debug: Log every bottle check
-    console.log('Checking collision:', {
-      bottleY: bottle.y,
-      bottleBottom,
-      boxTop,
-      boxBottom,
-      isInZone: bottleBottom >= boxTop && bottleTop <= boxBottom
-    })
-
     // Check if bottle is in the collision zone (vertically)
     const isInCollisionZone = bottleBottom >= boxTop && bottleTop <= boxBottom
 
@@ -67,20 +57,8 @@ export function useCollision() {
     const isHorizontalCollision = bottleRight >= boxLeft && bottleLeft <= boxRight
 
     if (!isHorizontalCollision) {
-      console.log('Vertical hit but horizontal miss:', {
-        bottleLeft,
-        bottleRight,
-        boxLeft,
-        boxRight
-      })
       return { hit: false, isPerfect: false }
     }
-
-    // COLLISION DETECTED!
-    console.log('🎯 COLLISION DETECTED!', {
-      bottle: { x: bottle.x, y: bottle.y },
-      boxPosition
-    })
 
     // Calculate if it's a perfect catch (center of box)
     const boxCenterX = (boxLeft + boxRight) / 2
@@ -100,8 +78,6 @@ export function useCollision() {
       ? GAME_CONFIG.GOLDEN_BOTTLE_POINTS
       : GAME_CONFIG.POINTS_PER_BOTTLE
 
-    console.log('💰 Adding score:', points, 'Golden:', bottle.isGolden, 'Perfect:', isPerfect)
-
     // Add to score
     gameStore.addScore(points, bottle.isGolden, isPerfect)
 
@@ -115,7 +91,6 @@ export function useCollision() {
    * Check all bottles for collisions
    */
   const checkAllCollisions = (bottles, boxPosition, onCatch) => {
-    console.log(`Checking ${bottles.length} bottles, boxPosition: ${boxPosition}`)
     const remainingBottles = []
 
     bottles.forEach(bottle => {

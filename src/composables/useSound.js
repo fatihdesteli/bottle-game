@@ -33,29 +33,23 @@ export function useSound() {
    */
   const initSounds = () => {
     if (isInitialized.value) {
-      console.log('Sounds already initialized')
       return
     }
-
-    console.log('Initializing sounds...')
 
     try {
       // Preload all sound effects
       Object.entries(SOUNDS).forEach(([key, path]) => {
         if (key !== 'background') {
-          console.log(`Loading sound: ${key} from ${path}`)
           loadSound(key, path)
         }
       })
 
       // Initialize background music separately
-      console.log(`Loading background music from ${SOUNDS.background}`)
       backgroundMusic = new Audio(SOUNDS.background)
       backgroundMusic.loop = true
       backgroundMusic.volume = 0.3 // Lower volume for background music
 
       isInitialized.value = true
-      console.log('Sounds initialized successfully')
     } catch (error) {
       console.error('Error initializing sounds:', error)
     }
@@ -66,7 +60,6 @@ export function useSound() {
    */
   const playSound = (soundKey) => {
     if (!gameStore.soundEnabled) {
-      console.log('Sound disabled in settings')
       return
     }
 
@@ -76,12 +69,9 @@ export function useSound() {
         // Clone the audio node to allow overlapping sounds
         const soundClone = sound.cloneNode()
         soundClone.volume = 0.5
-        console.log(`Playing sound: ${soundKey}`)
         soundClone.play().catch(err => {
           console.warn(`Failed to play sound: ${soundKey}`, err)
         })
-      } else {
-        console.warn(`Sound not found in cache: ${soundKey}`)
       }
     } catch (error) {
       console.error(`Error playing sound: ${soundKey}`, error)
@@ -93,18 +83,15 @@ export function useSound() {
    */
   const playBackgroundMusic = () => {
     if (!gameStore.musicEnabled) {
-      console.log('Music disabled in settings')
       return
     }
 
     if (!backgroundMusic) {
-      console.warn('Background music not initialized')
       return
     }
 
     try {
       backgroundMusic.currentTime = 0
-      console.log('Playing background music')
       backgroundMusic.play().catch(err => {
         console.warn('Failed to play background music:', err)
       })

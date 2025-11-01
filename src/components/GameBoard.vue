@@ -96,14 +96,11 @@ const handleGameUpdate = () => {
   // Check collisions if collection box is available
   if (collectionBoxRef.value && collectionBoxRef.value.getPosition) {
     const boxPosition = collectionBoxRef.value.getPosition()
-    console.log('🔍 Box position from ref:', boxPosition)
     bottles.value = collision.checkAllCollisions(
       bottles.value,
       boxPosition,
       handleBottleCatch
     )
-  } else {
-    console.warn('⚠️ CollectionBox ref not ready:', collectionBoxRef.value)
   }
 }
 
