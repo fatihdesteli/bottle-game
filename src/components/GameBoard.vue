@@ -381,24 +381,34 @@ onUnmounted(() => {
   }
 
   .pause-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 1.2rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+    top: 0.7rem;
+    right: 0.7rem;
   }
 }
 
 @media (max-width: 480px) {
+  .pause-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
   .pause-menu {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.2rem;
   }
 
   .pause-menu h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .pause-buttons button {
-    padding: 1rem 1.2rem;
-    font-size: 1rem;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.95rem;
   }
 }
 

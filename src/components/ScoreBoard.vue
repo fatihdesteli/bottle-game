@@ -243,12 +243,12 @@ const progressPercentage = computed(() => {
 /* Combo Counter */
 .combo-counter {
   background: linear-gradient(135deg, rgba(255, 68, 0, 0.8) 0%, rgba(255, 140, 0, 0.8) 100%);
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.3rem;
   border: 2px solid rgba(255, 215, 0, 0.5);
   animation: comboPopIn 0.3s ease;
 }
@@ -277,7 +277,7 @@ const progressPercentage = computed(() => {
 }
 
 .combo-icon {
-  font-size: 1.2rem;
+  font-size: 1rem;
   animation: spin 0.5s linear infinite;
 }
 
@@ -289,7 +289,7 @@ const progressPercentage = computed(() => {
 .combo-text {
   color: white;
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -335,51 +335,55 @@ const progressPercentage = computed(() => {
 /* Responsive */
 @media (max-width: 480px) {
   .score-board {
-    padding: 0.5rem;
-    gap: 0.4rem;
+    padding: 0.4rem 0.5rem;
+    gap: 0.3rem;
   }
 
   .lives {
-    font-size: 1.3rem;
-    gap: 0.2rem;
+    font-size: 1.2rem;
+    gap: 0.15rem;
   }
 
   .score-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
   .score-value {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .progress-bar {
-    height: 20px;
+    height: 18px;
   }
 
   .level-info {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .level-label {
+    padding: 0.2rem 0.6rem;
   }
 
   .next-level-info,
   .max-level-info {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .combo-counter {
-    padding: 0.25rem 0.6rem;
+    padding: 0.2rem 0.5rem;
   }
 
   .combo-icon {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   .combo-text {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 
   .powerup-badge {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
   }
 }
 </style>

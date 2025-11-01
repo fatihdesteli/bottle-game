@@ -500,11 +500,11 @@ export default {
 /* Responsive */
 @media (max-width: 480px) {
   .menu-screen {
-    padding: 1rem 0.8rem;
+    padding: 0.8rem 0.5rem;
   }
 
   .menu-container {
-    gap: 1.2rem;
+    gap: 1rem;
   }
 
   .game-title {
@@ -512,44 +512,44 @@ export default {
   }
 
   .game-title h1 {
-    font-size: 1.8rem;
-    margin: 0.5rem 0;
+    font-size: 1.7rem;
+    margin: 0.4rem 0;
   }
 
   .bottle-icon {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .subtitle {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .menu-buttons {
-    gap: 0.8rem;
+    gap: 0.7rem;
   }
 
   .btn-primary,
   .btn-secondary {
-    padding: 0.9rem 1.3rem;
-    font-size: 1rem;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.95rem;
   }
 
   .settings {
-    gap: 0.8rem;
+    gap: 0.7rem;
   }
 
   .setting-btn {
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.85rem;
   }
 
   .modal-content {
-    padding: 1.2rem;
+    padding: 1rem;
   }
 
   .modal-content h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
   }
 }
 
