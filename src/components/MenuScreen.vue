@@ -499,22 +499,57 @@ export default {
 
 /* Responsive */
 @media (max-width: 480px) {
+  .menu-screen {
+    padding: 1rem 0.8rem;
+  }
+
+  .menu-container {
+    gap: 1.2rem;
+  }
+
+  .game-title {
+    margin-bottom: -0.5rem;
+  }
+
   .game-title h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
   }
 
   .bottle-icon {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .menu-buttons {
+    gap: 0.8rem;
   }
 
   .btn-primary,
   .btn-secondary {
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
+    padding: 0.9rem 1.3rem;
+    font-size: 1rem;
+  }
+
+  .settings {
+    gap: 0.8rem;
+  }
+
+  .setting-btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
   }
 
   .modal-content {
-    padding: 1.5rem;
+    padding: 1.2rem;
+  }
+
+  .modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 

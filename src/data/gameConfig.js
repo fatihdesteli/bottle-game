@@ -43,7 +43,7 @@ export const LEVELS = [
   },
   {
     level: 2,
-    scoreRequired: 700,
+    scoreRequired: 1500,
     bottleSpeed: 2.8,
     spawnInterval: 1300,
     message: "İyi gidiyorsun! Devam et! 💪",
@@ -52,8 +52,8 @@ export const LEVELS = [
   },
   {
     level: 3,
-    scoreRequired: 1500,
-    bottleSpeed: 3.5,
+    scoreRequired: 3000,
+    bottleSpeed: 3.8,
     spawnInterval: 1100,
     message: "Vay be! Sen gerçekten hızlısın! 🔥",
     outfit: "casual",
@@ -61,27 +61,27 @@ export const LEVELS = [
   },
   {
     level: 4,
-    scoreRequired: 2500,
-    bottleSpeed: 4.2,
-    spawnInterval: 900,
+    scoreRequired: 5000,
+    bottleSpeed: 5.5,
+    spawnInterval: 850,
     message: "Bu kadarını beklemiyordum! 😍",
     outfit: "elegant",
     compliment: "Muhteşemsin!"
   },
   {
     level: 5,
-    scoreRequired: 4000,
-    bottleSpeed: 5,
-    spawnInterval: 750,
+    scoreRequired: 8000,
+    bottleSpeed: 7.5,
+    spawnInterval: 700,
     message: "İnanılmazsın! Bitir beni! 🌟",
     outfit: "party",
     compliment: "Efsanesin!"
   },
   {
     level: 6,
-    scoreRequired: 6000,
-    bottleSpeed: 6,
-    spawnInterval: 600,
+    scoreRequired: 12000,
+    bottleSpeed: 10,
+    spawnInterval: 550,
     message: "EFSANE! Sen bir şampiyonsun! 👑💎",
     outfit: "swimwear",
     compliment: "LEJANTsın!"

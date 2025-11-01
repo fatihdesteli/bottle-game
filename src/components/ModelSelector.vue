@@ -343,31 +343,43 @@ const goBack = () => {
 
 /* Responsive */
 @media (max-width: 480px) {
+  .model-selector {
+    padding: 1rem 0.8rem;
+  }
+
   .selector-container {
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .header h1 {
-    font-size: 1.6rem;
-    margin-top: 3rem;
+    font-size: 1.5rem;
+    margin: 2.5rem 0 0.3rem 0;
   }
 
-  .back-btn {
-    padding: 0.6rem 1.2rem;
+  .subtitle {
     font-size: 0.9rem;
   }
 
+  .back-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .models-grid {
+    gap: 0.8rem;
+  }
+
   .model-card {
-    padding: 1.2rem;
+    padding: 1rem;
   }
 
   .avatar-placeholder {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   .avatar-initial {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .model-info h2 {

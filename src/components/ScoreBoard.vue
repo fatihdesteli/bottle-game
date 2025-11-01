@@ -81,11 +81,11 @@ const progressPercentage = computed(() => {
 
 <style scoped>
 .score-board {
-  padding: 1rem;
+  padding: 0.8rem;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.6rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -243,12 +243,12 @@ const progressPercentage = computed(() => {
 /* Combo Counter */
 .combo-counter {
   background: linear-gradient(135deg, rgba(255, 68, 0, 0.8) 0%, rgba(255, 140, 0, 0.8) 100%);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   border: 2px solid rgba(255, 215, 0, 0.5);
   animation: comboPopIn 0.3s ease;
 }
@@ -277,7 +277,7 @@ const progressPercentage = computed(() => {
 }
 
 .combo-icon {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   animation: spin 0.5s linear infinite;
 }
 
@@ -289,7 +289,7 @@ const progressPercentage = computed(() => {
 .combo-text {
   color: white;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -335,24 +335,51 @@ const progressPercentage = computed(() => {
 /* Responsive */
 @media (max-width: 480px) {
   .score-board {
-    padding: 0.8rem;
-    gap: 0.6rem;
+    padding: 0.5rem;
+    gap: 0.4rem;
   }
 
   .lives {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    gap: 0.2rem;
+  }
+
+  .score-label {
+    font-size: 0.7rem;
   }
 
   .score-value {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .progress-bar {
-    height: 25px;
+    height: 20px;
+  }
+
+  .level-info {
+    font-size: 0.8rem;
+  }
+
+  .next-level-info,
+  .max-level-info {
+    font-size: 0.75rem;
+  }
+
+  .combo-counter {
+    padding: 0.25rem 0.6rem;
+  }
+
+  .combo-icon {
+    font-size: 1rem;
   }
 
   .combo-text {
-    font-size: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .powerup-badge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
   }
 }
 </style>

@@ -628,24 +628,77 @@ const stats = computed(() => [
 
 /* Responsive */
 @media (max-width: 480px) {
+  .game-over-screen {
+    padding: 1rem 0.8rem;
+  }
+
   .game-over-container {
-    padding: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 20px;
   }
 
   .game-over-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .final-score {
+    margin: 1rem 0;
+  }
+
+  .score-label {
+    font-size: 0.9rem;
   }
 
   .score-value {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .tabs {
+    gap: 0.6rem;
+    margin: 1rem 0;
+  }
+
+  .tab-btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
   }
 
   .stats-grid {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .leaderboard-item {
+    padding: 0.8rem;
+  }
+
+  .new-achievements h3 {
+    font-size: 1.2rem;
   }
 
   .action-buttons {
     flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
   }
 }
 </style>
