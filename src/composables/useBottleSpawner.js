@@ -28,6 +28,27 @@ export function useBottleSpawner() {
   }
 
   /**
+   * Generate random X position ensuring minimum distance from other positions
+   */
+  const getRandomXWithSpacing = (existingPositions = [], minDistance = 15) => {
+    let attempts = 0
+    let x = getRandomX()
+
+    // Try to find a position with adequate spacing
+    while (attempts < 10) {
+      const hasGoodSpacing = existingPositions.every(pos => Math.abs(pos - x) >= minDistance)
+      if (hasGoodSpacing) {
+        return x
+      }
+      x = getRandomX()
+      attempts++
+    }
+
+    // If we can't find a good position after 10 attempts, just return the last one
+    return x
+  }
+
+  /**
    * Check if bottle should be golden
    */
   const isGoldenBottle = () => {
@@ -37,10 +58,10 @@ export function useBottleSpawner() {
   /**
    * Create a new bottle object
    */
-  const createBottle = () => {
+  const createBottle = (xPosition = null) => {
     const bottle = {
       id: nextBottleId.value++,
-      x: getRandomX(),
+      x: xPosition !== null ? xPosition : getRandomX(),
       y: -100, // Start above the screen
       isGolden: isGoldenBottle(),
       velocity: 0 // Will be set by game loop
@@ -56,25 +77,24 @@ export function useBottleSpawner() {
 
     const spawn = () => {
       if (gameStore.gameState === 'playing') {
-        // Level 4+ (index 3+): spawn 2 bottles at once
-        const shouldSpawnDouble = gameStore.currentLevel >= 3
+        // Level 5+ (index 4+): spawn 3 bottles
+        // Level 1-4: spawn 2 bottles
+        const shouldSpawnTriple = gameStore.currentLevel >= 4
+        const bottleCount = shouldSpawnTriple ? 3 : 2
 
-        if (shouldSpawnDouble) {
-          // Spawn first bottle
-          const bottle1 = createBottle()
-          onSpawn(bottle1)
+        // Track X positions for spacing
+        const positions = []
 
-          // Spawn second bottle with slight delay to avoid exact overlap
+        // Spawn bottles with proper spacing
+        for (let i = 0; i < bottleCount; i++) {
           setTimeout(() => {
             if (gameStore.gameState === 'playing') {
-              const bottle2 = createBottle()
-              onSpawn(bottle2)
+              const xPos = getRandomXWithSpacing(positions, 15)
+              positions.push(xPos)
+              const bottle = createBottle(xPos)
+              onSpawn(bottle)
             }
-          }, 100)
-        } else {
-          // Spawn single bottle for levels 1-3
-          const bottle = createBottle()
-          onSpawn(bottle)
+          }, i * 250) // 250ms delay between each bottle
         }
       }
 

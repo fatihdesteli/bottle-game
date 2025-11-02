@@ -20,8 +20,8 @@ export const GAME_CONFIG = {
   },
   
   // Şişe özellikleri
-  BOTTLE_WIDTH: 40,
-  BOTTLE_HEIGHT: 80,
+  BOTTLE_WIDTH: 34, // Reduced by 15% from 40
+  BOTTLE_HEIGHT: 68, // Reduced by 15% from 80
   GOLDEN_BOTTLE_CHANCE: 0.1, // %10
   
   // Kasa özellikleri
