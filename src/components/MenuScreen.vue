@@ -150,6 +150,7 @@ export default {
   padding: 2rem 1rem;
   position: relative;
   overflow: hidden;
+  background: transparent;
 }
 
 .menu-container {

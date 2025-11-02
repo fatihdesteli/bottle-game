@@ -199,6 +199,7 @@ onUnmounted(() => {
   height: 100vh;
   display: flex;
   overflow: hidden;
+  background: transparent;
 }
 
 /* Game Area (75%) */

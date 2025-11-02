@@ -75,6 +75,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  background: linear-gradient(135deg, #00563B 0%, #1a7a58 50%, #2d8f6f 100%);
 }
 
 .app-container {

@@ -187,6 +187,7 @@ const stats = computed(() => [
   padding: 2rem 1rem;
   overflow-y: auto;
   position: relative;
+  background: transparent;
 }
 
 .game-over-container {

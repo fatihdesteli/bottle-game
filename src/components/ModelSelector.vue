@@ -94,6 +94,7 @@ const goBack = () => {
   justify-content: center;
   padding: 2rem 1rem;
   overflow-y: auto;
+  background: transparent;
 }
 
 .selector-container {
