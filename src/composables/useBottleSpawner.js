@@ -11,6 +11,12 @@ export function useBottleSpawner() {
   const spawnTimer = ref(null)
   const nextBottleId = ref(0)
 
+  // Golden bottle tracking: one per level
+  let currentLevelForGolden = 0
+  let bottleCountInLevel = 0
+  let goldenBottleSpawned = false
+  let goldenBottleTarget = Math.floor(Math.random() * 10) + 15 // Random between 15-25 bottles
+
   /**
    * Calculate spawn interval based on current level
    */
@@ -50,9 +56,26 @@ export function useBottleSpawner() {
 
   /**
    * Check if bottle should be golden
+   * Only one golden bottle per level
    */
   const isGoldenBottle = () => {
-    return Math.random() < GAME_CONFIG.GOLDEN_BOTTLE_CHANCE
+    // Check if level changed, reset counters
+    if (gameStore.currentLevel !== currentLevelForGolden) {
+      currentLevelForGolden = gameStore.currentLevel
+      bottleCountInLevel = 0
+      goldenBottleSpawned = false
+      goldenBottleTarget = Math.floor(Math.random() * 10) + 15 // Random between 15-25 bottles
+    }
+
+    bottleCountInLevel++
+
+    // Spawn one golden bottle per level after reaching target count
+    if (!goldenBottleSpawned && bottleCountInLevel >= goldenBottleTarget) {
+      goldenBottleSpawned = true
+      return true
+    }
+
+    return false
   }
 
   /**

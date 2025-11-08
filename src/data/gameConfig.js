@@ -22,7 +22,7 @@ export const GAME_CONFIG = {
   // Şişe özellikleri
   BOTTLE_WIDTH: 31, // Reduced by 10% from 34 (originally 40)
   BOTTLE_HEIGHT: 61, // Reduced by 10% from 68 (originally 80)
-  GOLDEN_BOTTLE_CHANCE: 0.1, // %10
+  GOLDEN_BOTTLE_CHANCE: 0.1, // Not used - Golden bottles spawn once per level (15-25 bottles)
   
   // Kasa özellikleri
   BOX_WIDTH: 150,
