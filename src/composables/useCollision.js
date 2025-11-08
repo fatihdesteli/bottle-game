@@ -46,14 +46,16 @@ export function useCollision() {
     const bottleTop = bottle.y
     const bottleBottom = bottle.y + bottleHeightPx
 
-    // Check if bottle is in the collision zone (vertically)
-    const isInCollisionZone = bottleBottom >= boxTop && bottleTop <= boxBottom
+    // Only catch bottles that land on TOP of the box
+    // Check if bottle bottom is near the box top (landing from above)
+    const catchTolerance = 30 // 30px tolerance for catching from top
+    const isTopCatch = bottleBottom >= boxTop - catchTolerance && bottleBottom <= boxTop + catchTolerance
 
-    if (!isInCollisionZone) {
+    if (!isTopCatch) {
       return { hit: false, isPerfect: false }
     }
 
-    // Check horizontal collision
+    // Check horizontal collision - bottle must be above the box horizontally
     const isHorizontalCollision = bottleRight >= boxLeft && bottleLeft <= boxRight
 
     if (!isHorizontalCollision) {

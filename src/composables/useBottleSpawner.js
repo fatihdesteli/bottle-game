@@ -94,7 +94,7 @@ export function useBottleSpawner() {
               const bottle = createBottle(xPos)
               onSpawn(bottle)
             }
-          }, i * 250) // 250ms delay between each bottle
+          }, i * 500) // 500ms (0.5s) delay between each bottle
         }
       }
 

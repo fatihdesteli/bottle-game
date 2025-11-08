@@ -20,8 +20,8 @@ export const GAME_CONFIG = {
   },
   
   // Şişe özellikleri
-  BOTTLE_WIDTH: 34, // Reduced by 15% from 40
-  BOTTLE_HEIGHT: 68, // Reduced by 15% from 80
+  BOTTLE_WIDTH: 31, // Reduced by 10% from 34 (originally 40)
+  BOTTLE_HEIGHT: 61, // Reduced by 10% from 68 (originally 80)
   GOLDEN_BOTTLE_CHANCE: 0.1, // %10
   
   // Kasa özellikleri
@@ -43,7 +43,7 @@ export const LEVELS = [
   },
   {
     level: 2,
-    scoreRequired: 2500,
+    scoreRequired: 3750, // +50% from 2500
     bottleSpeed: 3.5,
     spawnInterval: 1200,
     message: "İyi gidiyorsun! Devam et! 💪",
@@ -52,7 +52,7 @@ export const LEVELS = [
   },
   {
     level: 3,
-    scoreRequired: 6000,
+    scoreRequired: 9000, // +50% from 6000
     bottleSpeed: 5,
     spawnInterval: 1000,
     message: "Vay be! Sen gerçekten hızlısın! 🔥",
@@ -61,7 +61,7 @@ export const LEVELS = [
   },
   {
     level: 4,
-    scoreRequired: 12000,
+    scoreRequired: 18000, // +50% from 12000
     bottleSpeed: 7,
     spawnInterval: 800,
     message: "Bu kadarını beklemiyordum! 😍",
@@ -70,7 +70,7 @@ export const LEVELS = [
   },
   {
     level: 5,
-    scoreRequired: 20000,
+    scoreRequired: 30000, // +50% from 20000
     bottleSpeed: 9.5,
     spawnInterval: 650,
     message: "İnanılmazsın! Bitir beni! 🌟",
@@ -79,7 +79,7 @@ export const LEVELS = [
   },
   {
     level: 6,
-    scoreRequired: 30000,
+    scoreRequired: 45000, // +50% from 30000
     bottleSpeed: 12,
     spawnInterval: 500,
     message: "EFSANE! Sen bir şampiyonsun! 👑💎",
